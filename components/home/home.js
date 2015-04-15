@@ -1,5 +1,4 @@
-export default class HomeController{
-  //HomeService injected in app.js
+class HomeController{
   constructor(HomeService){
     //this = scope
     this.name = 'Friend'
@@ -16,3 +15,6 @@ export default class HomeController{
     });
   }
 }
+
+
+export default ['HomeController', ['HomeService', HomeController]];

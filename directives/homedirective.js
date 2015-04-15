@@ -1,4 +1,7 @@
-export default class HomeDirective {
+//why – http://www.michaelbromley.co.uk/blog/350/exploring-es6-classes-in-angularjs-1-x#_section-directives
+import directiveFactory from 'app/directivefactory';
+
+class HomeDirective {
 
     constructor($interval) {
         this.template = '<div>I\'m a directive!</div>';
@@ -23,3 +26,5 @@ export default class HomeDirective {
         element.css('top', (Math.random() * 500) + 'px');
     }
 }
+
+export default ['homeDirective', directiveFactory(['$interval', HomeDirective])];

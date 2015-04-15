@@ -1,4 +1,4 @@
-export default class HomeService {
+class HomeService {
     constructor($http) {
         this.$http = $http;
     }
@@ -6,3 +6,5 @@ export default class HomeService {
         return this.$http.get('http://www.reddit.com/r/perfectloops/top.json?sort=top&t=week');
     }
 }
+
+export default ['HomeService', ['$http', HomeService]];
