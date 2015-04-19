@@ -12,12 +12,17 @@ import DifferentController from 'components/different/different';
 // ...[a,b,c] -> a,b,c
 
 angular.module('testApp', ['ngNewRouter'])
+  .config(['$componentLoaderProvider', SetTemplatesPath])
   .controller('AppController', ['$router', AppController])
   .service(...HomeService)
   .directive(...HomeDirective)
   .controller(...HomeController)
   .controller(...DifferentController);
+    
 
+function SetTemplatesPath ($componentLoaderProvider){
+  $componentLoaderProvider.setTemplateMapping(name => `app/components/${name}/${name}.html`);
+}
 
 function AppController ($router) {
   $router.config([
@@ -26,3 +31,4 @@ function AppController ($router) {
     { path: '/different/:id', component: 'different' }  // in 'components' folder
   ]);
 }
+

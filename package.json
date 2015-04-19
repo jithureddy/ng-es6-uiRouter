@@ -10,5 +10,9 @@
       "babel-runtime": "npm:babel-runtime@^5.0.12",
       "core-js": "npm:core-js@^0.8.1"
     }
+  },
+  "devDependencies": {
+    "browser-sync": "^2.6.4",
+    "gulp": "^3.8.11"
   }
 }

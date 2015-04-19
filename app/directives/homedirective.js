@@ -1,5 +1,5 @@
 //why – http://www.michaelbromley.co.uk/blog/350/exploring-es6-classes-in-angularjs-1-x#_section-directives
-import directiveFactory from 'app/directivefactory';
+import directiveFactory from 'directivefactory';
 
 class HomeDirective {
 
