@@ -1,7 +1,8 @@
 class DifferentController{
-  constructor($routeParams){
-    this.id = $routeParams.id;
+  constructor($stateParams){
+    this.id = $stateParams.id;
   }
 }
 
-export default ['DifferentController', ['$routeParams', DifferentController]];
+DifferentController.$inject = ['$stateParams'];
+export {DifferentController};

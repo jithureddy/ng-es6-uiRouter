@@ -16,5 +16,5 @@ class HomeController{
   }
 }
 
-
-export default ['HomeController', ['HomeService', HomeController]];
+HomeController.$inject = ['HomeService'];
+export {HomeController};
